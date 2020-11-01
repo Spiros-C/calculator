@@ -22,7 +22,7 @@ public class Calulator {
         
         Scanner num1Check = new Scanner(System.in);
 
-Print("CALCULATOR press 'c' to restart"+System.lineSeparator()+"[ N U M B E R ] ");
+Print("BASIC CALCULATOR with memory, press 'c' to restart"+System.lineSeparator()+"[ N U M B E R ] ");
 
     while (num1Check.hasNextInt()) {
     
@@ -93,11 +93,12 @@ Print("CALCULATOR press 'c' to restart"+System.lineSeparator()+"[ N U M B E R ] 
                                     break;
                                 }
                                 
-                    case 'c' : Print("[ N U M B E R ] ");
+                        case 'c' : Print("[ N U M B E R ] ");
                                alive =false;
                                break; 
-                    default:
-                    PrintN("Illogical operator.. Try Again");
+                               
+                        default:
+                                PrintN("Illogical operator.. Try Again");
                     }      
                 }
     //num1Check.next(); 
