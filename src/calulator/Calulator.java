@@ -1,14 +1,14 @@
-package calulator;      // Works for integers
+package calulator;      // Works for integers & no div/0 condition 
 
 import java.util.Scanner;
 
 
 public class Calulator {
     
-    public static void Print(String PR) {System.out.print(""+PR);}              //Used extensively in debugging (shift alt f)!
+    public static void Print(String PR) {System.out.print(""+PR);}              //Used extensively in debugging (sout shift alt f)!
     public static void PrintN(String PR) {System.out.println(""+PR);}
 
-    public static char consoleChar() {
+    public static char consoleChar() {                                          //Scanner Method
         Scanner scan = new Scanner(System.in);
         Print("[(+)(-) (*)(/)] ");
         return scan.next().charAt(0); 
