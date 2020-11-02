@@ -1,4 +1,5 @@
 # calculator/gradle/wrapper/gradle-wrapper.properties
+Spiros Christantonis
 
 .gitignore used:
 
