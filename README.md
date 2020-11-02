@@ -1,4 +1,7 @@
 # calculator/gradle/wrapper/gradle-wrapper.properties
+
+.gitignore used:
+
 ##----------Android----------
 # build
 *.apk
