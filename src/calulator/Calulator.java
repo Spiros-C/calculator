@@ -1,4 +1,4 @@
-package calulator;
+package calulator;      // Works for integers
 
 import java.util.Scanner;
 
@@ -16,95 +16,98 @@ public class Calulator {
     
 
     public static void main(String[] args) {
-        
+
         int num1;
         int num2;
-        
+
         Scanner num1Check = new Scanner(System.in);
 
-Print("BASIC CALCULATOR with memory, press 'c' to restart"+System.lineSeparator()+"[ N U M B E R ] ");
+        Print("BASIC CALCULATOR with memory" + System.lineSeparator() + 
+              "<  press  'c' to  restart  >"+ System.lineSeparator() +
+              "< press 'c' again to close >" + System.lineSeparator() + System.lineSeparator()+ 
+              "[ N U M B E R ] ");
 
-    while (num1Check.hasNextInt()) {
-    
-            num1=num1Check.nextInt();
+        while (num1Check.hasNextInt()) {
 
-                boolean alive = true;
-              
-                while (alive) {
-                    Scanner num2Check = new Scanner(System.in);
-                    
-                    switch(consoleChar()){
-                        
-                        case '+' : Print("[ N U M B E R ] ");
-                    
-                                if(num2Check.hasNextInt()==true){
-                            
-                                    num2=num2Check.nextInt();
-                                    num1 = num1+num2;
-                                    PrintN("[ CALCULATING ] "+num1);
-                                    break;
-                                }
-                                else {
-                                    Print("[ N U M B E R ] ");
-                                    alive =false;
-                                    break;
-                                }
-                        case '-' : Print("[ N U M B E R ] ");
-                    
-                                if(num2Check.hasNextInt()==true){
-                            
-                                    num2=num2Check.nextInt();
-                                    num1 = num1-num2;
-                                    PrintN("[ CALCULATING ] "+num1);
-                                    break;
-                                }
-                                else {
-                                    Print("[ N U M B E R ] ");
-                                    alive =false;
-                                    break;
-                                }
-                        case '*' : Print("[ N U M B E R ] ");
-                    
-                                if(num2Check.hasNextInt()==true){
-                            
-                                    num2=num2Check.nextInt();
-                                    num1 = num1*num2;
-                                    PrintN("[ CALCULATING ] "+num1);
-                                    break;
-                                }
-                                else {
-                                    Print("[ N U M B E R ] ");
-                                    alive =false;
-                                    break;
-                                }
-                                
-                        case '/' : Print("[ N U M B E R ] ");
-                    
-                                if(num2Check.hasNextInt()==true){
-                            
-                                    num2=num2Check.nextInt();
-                                    num1 = num1/num2;
-                                    PrintN("[ CALCULATING ] "+num1);
-                                    break;
-                                }
-                                else {
-                                    Print("[ N U M B E R ] ");
-                                    alive =false;
-                                    break;
-                                }
-                                
-                        case 'c' : Print("[ N U M B E R ] ");
-                               alive =false;
-                               break; 
-                               
-                        default:
-                                PrintN("Illogical operator.. Try Again");
-                    }      
+            num1 = num1Check.nextInt();
+
+            boolean alive = true;
+
+            while (alive) {
+                Scanner num2Check = new Scanner(System.in);
+
+                switch (consoleChar()) {
+
+                    case '+':
+                        Print("[ N U M B E R ] ");
+
+                        if (num2Check.hasNextInt() == true) {
+
+                            num2 = num2Check.nextInt();
+                            num1 = num1 + num2;
+                            PrintN("[ CALCULATING ] " + num1);
+                            break;
+                        } else {
+                            Print("[ N U M B E R ] ");
+                            alive = false;
+                            break;
+                        }
+                    case '-':
+                        Print("[ N U M B E R ] ");
+
+                        if (num2Check.hasNextInt() == true) {
+
+                            num2 = num2Check.nextInt();
+                            num1 = num1 - num2;
+                            PrintN("[ CALCULATING ] " + num1);
+                            break;
+                        } else {
+                            Print("[ N U M B E R ] ");
+                            alive = false;
+                            break;
+                        }
+                    case '*':
+                        Print("[ N U M B E R ] ");
+
+                        if (num2Check.hasNextInt() == true) {
+
+                            num2 = num2Check.nextInt();
+                            num1 = num1 * num2;
+                            PrintN("[ CALCULATING ] " + num1);
+                            break;
+                        } else {
+                            Print("[ N U M B E R ] ");
+                            alive = false;
+                            break;
+                        }
+
+                    case '/':
+                        Print("[ N U M B E R ] ");
+
+                        if (num2Check.hasNextInt() == true) {
+
+                            num2 = num2Check.nextInt();
+                            num1 = num1 / num2;
+                            PrintN("[ CALCULATING ] " + num1);
+                            break;
+                        } else {
+                            Print("[ N U M B E R ] ");
+                            alive = false;
+                            break;
+                        }
+
+                    case 'c':
+                        Print("[ N U M B E R ] ");
+                        alive = false;
+                        break;
+
+                    default:
+                        PrintN("Illogical operator.. Try Again");
                 }
-    //num1Check.next(); 
-    
-    }  
-        
-        
-    }   
+            }
+            
+
+        }
+
+    }
 }
