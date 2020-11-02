@@ -23,7 +23,7 @@ public class Calulator {
         Scanner num1Check = new Scanner(System.in);
 
         Print("BASIC CALCULATOR with memory" + System.lineSeparator() + 
-              "<  press  'c' to  restart  >"+ System.lineSeparator() +
+              "<  press  'c' to  restart  >" + System.lineSeparator() +
               "< press 'c' again to close >" + System.lineSeparator() + System.lineSeparator()+ 
               "[ N U M B E R ] ");
 
